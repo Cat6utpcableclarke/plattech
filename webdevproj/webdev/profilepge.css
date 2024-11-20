@@ -1,0 +1,276 @@
+.header {
+    background-color: #003521;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.pcontainer {
+    margin-left: 25%; 
+    margin-right: 20%;
+    padding: 10px;
+    background-color: rgb(75, 90, 50);
+    border-radius: 30px;
+    font-family: cursive;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sidebar{
+    position: fixed;
+    top: 103px;
+    height: 100vh;
+    background-color:rgb(75, 90, 50);
+    float: left;
+}
+.sidebar ul{
+    margin-right: 30px;
+}
+
+.sidebar ul li{
+    font-size: large;
+    font-family: cursive;
+    list-style: none;
+    width:fit-content;
+    background-color: rgb(192, 192, 149);
+    border-radius: 10px;
+    color: rgb(51, 49, 49);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.sidebar ul li:hover{
+    background-color:rgb(216, 216, 192);
+    transition: 0.3s;
+}
+
+.sidebar ul li.active {
+    background-color: rgb(216, 216, 192);
+    transition: 0.3s;
+}
+#user-info p{
+    background-color:rgb(192, 192, 149);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#itemsell {
+    margin-left: 310px; 
+}
+
+#edit-info p{
+    background-color:rgb(192, 192, 149);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#changepassinfo p{
+    background-color:rgb(192, 192, 149);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+
+#user-info button{
+    background-color: rgb(58, 26, 26);
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+    
+
+}
+#user-info button:hover{
+    background-color: rgb(61, 38, 38);
+    transition: 0.3s;
+}
+
+#edit-info button{
+    background-color:#003521;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+}
+#edit-info button:hover{
+    background-color: rgb(61, 38, 38);
+    transition: 0.3s;
+}
+
+#changepassinfo button{
+    background-color:#003521;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#changepassinfo button:hover{
+    background-color: rgb(61, 38, 38);
+    transition: 0.3s;
+}
+
+
+.container  img{
+    height: 250px;
+    width: 250px;
+}
+
+.orders {
+    min-height: 250px;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+   
+}
+
+.orders .emptmsg {
+    font-size: x-large;
+    font-family: cursive;
+}
+/* Modal */
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(192, 192, 149);
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
+    max-width: 80%;
+    max-height: 80%;
+    position: relative;
+}
+.modal-content form{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+
+.modal-content form label{
+    background-color:rgba(61, 38, 38, 0.795) ;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: cursive;
+    
+}
+
+.modal-content form label input[type=text]{
+    background-color: rgb(235, 212, 185);
+}
+
+.modal-content button{
+    background-color: rgba(32, 20, 20, 0.795) ;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+.modal-content button:hover{
+    background-color: rgba(85, 61, 61, 0.795) ;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content p{
+    font-size: x-large;
+}
+.close{
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    width: fit-content;
+    border-radius: 250px;
+    margin-bottom: 2px;
+
+}
+.close:hover{
+   background-color: aliceblue;
+   transition: 0.3s;
+}
+
+section{
+    font-family: cursive;
+}
+.sec {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1em; /* Space between items */
+}
+
+.container .item {
+    background-color: beige;
+     padding-left: 0.5em; 
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 800px;
+    font-size: 1.3em; /* Increased font size */
+    height: 300px; /* Fixed height (adjust as needed) */
+    display: flex;
+    gap:1em;
+    /* flex-wrap: wrap; */
+    align-items:center;
+     justify-content:flex-start;
+     text-overflow: ellipsis;
+     overflow: auto;
+}
+
+
+.container  img{
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+}
+.item button{
+    background-color: rgb(230, 240, 219);
+    border-radius: 10px;
+    text-decoration: none;
+    border: solid;
+    border-style:solid;
+    border-width: 0.1px;
+    font-family: cursive;
+    padding: 5px;
+    font-weight: bold;
+    font-size: medium
+}
+
+.item button:hover{
+    background-color: rgb(196, 224, 166);
+}

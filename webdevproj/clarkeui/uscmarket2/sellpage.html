@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="sellpage.css">
+</head>
+<body>
+    <header>
+     <div class="header">
+            <div class="logo"><img src="images/usclogo.png"></div>
+            <div class="name"><p>USC NIGHT MARKET</p></div>
+           <div class="profile"><p>PROFILE</p></div>
+            
+        </div>
+    </header>
+
+    <div class="sell">
+        <form>
+            <label for="name">ITEM NAME:</label><br>
+            <input type="text" placeholder="ENTER ITEM NAME" name="name" id="name" required><br>
+
+            <label for="item-type">SELECT ITEM TYPE</label><br>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" id="electronics" name="radio" value="electronics">
+                    <span>Electronics</span>
+                </label>
+                <label>
+                    <input type="radio" id="books" name="radio" value="books">
+                    <span>Book</span>
+                </label>
+                <label>
+                    <input type="radio" id="clothes" name="radio" value="clothes">
+                    <span>Clothes</span>
+                </label>
+                <label>
+                    <input type="radio" id="misc" name="radio" value="misc">
+                    <span>Misc</span>
+                </label>
+            </div>
+            <br>
+            <label for="desc">Item Description</label><br>
+            <textarea id="desc" name="desc" rows="4" cols="50" placeholder="Enter item description"></textarea><br>
+            
+            <label for="price">Price</label><br>
+            <input type="text" id="price" name="price" placeholder="Enter price"><br>
+            
+            <label for="itmphoto">Upload Photo</label><br>
+            <input type="file" id="itmphoto" name="photo"><br><br>
+            
+            <input type="submit" value="SELL">
+        </form>
+    </div>
+
+    <script>//ADD JAVA SCRIPT</script>
+</body>

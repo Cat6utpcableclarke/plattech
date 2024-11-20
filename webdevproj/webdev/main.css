@@ -1,0 +1,123 @@
+.clickable {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+.clickable img{
+    height: 200px;
+    width: 200px;
+    transition: 0.5s;
+}
+
+ .clickable img:hover{
+    height: 250px;
+    width: 250px;
+    transition: 0.5s;
+}
+
+
+body {
+    margin: 0;
+    background-image: url(images/marketbackground.png);
+    background-position: bottom center;
+    background-attachment: fixed;
+    position: static;
+    padding-top: 103px; 
+}
+
+.header {
+    background-color: #003521;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+
+.logo{
+    margin-left: 30px;
+}
+
+.name{
+    margin-top: 2px;
+}
+
+.name p{
+    color: white;
+    font-size: xx-large;
+}
+
+.profile{
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: beige;
+    width: fit-content;
+    height:fit-content;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profile:hover{
+    background-color: rgb(238, 238, 161);
+}
+
+.msg{
+    text-align: center; 
+    margin-top: 50px;
+    font-size: x-large;
+    font-family:cursive;
+}
+
+.select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 50px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.select div {
+    border-radius: 10px;
+    font-family: cursive;
+}
+
+ .Sell{
+   background-color: beige;
+   font-family:cursive;
+   font-size: x-large;
+   text-align: center;
+   height:fit-content;
+   width: fit-content;
+   padding: 5px;
+   border-radius: 10px;
+   margin: auto;
+   cursor: pointer;
+   position: static;
+   background-attachment:fixed;
+}
+.Sell:hover{
+   background-color: rgb(228, 228, 179);
+   transition: 0.3s;
+ }
+
+.select div:hover {
+   background-color: aliceblue;
+   cursor: pointer;
+   transition:0.5s;
+} 
+
+.back button{
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.back button img{
+   width: 50px;
+   height: 50px;
+}

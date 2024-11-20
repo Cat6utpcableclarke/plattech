@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="sellpage.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <header>
+        <div class="sheader">
+            <div class="logo"><img src="images/usclogo.png"></div>
+            <div class="name"><p>USC NIGHT MARKET</p></div>
+             <div class="profile"><p>PROFILE</p></div>
+     </div><br>
+           
+    </header>
+      <!--add back()js-->
+    <div class="back"><button onclick="back()"><img src="images/backarrow.png"></button></div>
+        <div class="container">
+                <label for="itm_name">Item name</label>
+                <input type="text" id="itm_name" name="itm_name">
+            <br><br>
+                <label for="itm_desc">Item desc</label>
+                <textarea id="itm_desc" name="itm_desc" rows="4" cols="50" placeholder="add ur msngr link here and item description"></textarea>
+            <!--<input type="text" id="itm_desc" name="itm_desc" placeholder="add ur seller contacts here">-->
+            <br><br>
+                <label for="item_prc">Item price</label>
+                <input type="text" id="itm_prc" name="itm_prc">
+        <br><br>
+            
+     <p>Item type</p>
+            <div class="radio">
+    
+                <input type="radio" id="S_books" name="choice" value="books">
+                <label for="S_books">Books</label><br>
+
+                <input type="radio" id="S_electronics" name="choice" value="electronics">
+                <label for="S_electronics">electronics</label><br>
+
+                <input type="radio" id="S_clothes" name="choice" value="clothes">
+                <label for="S_clothes">Clothes</label><br>
+
+                <input type="radio" id="S_misc" name="choice" value="misc">
+                <label for="S_misc">Misc</label><br>
+            </div>   
+    <br><br>
+      
+            <p style="text-align: center;">Submit Picture of Item</p><br>
+            <label for="itm_image">Item Image</label>
+            <input type="file" id="itm_image" name="itm_image"><br><br>
+
+            <button onclick="submitItem()">Submit Item</button>
+    
+    </div>
+    <script type="text/javascript" src="./code.js"></script>
+</body>
+</html>

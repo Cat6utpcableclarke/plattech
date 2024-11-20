@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+</head>
+<body>
+    <header class="lhead">
+        <div class="header">
+               <div class="logo"></div>
+               <div class="name"><p>USC NIGHT MARKET</p></div>
+           </div>
+    </header>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <p>No account? Sign Up!</p>
+            <div class="input-group">
+                <input type="text" id="name" name="name" >
+                <label for="name">Name</label><br><br>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="year" name="year" required>
+                <label for="year">Year</label><br><br>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="course" name="course" required>
+                <label for="course">Course</label><br><br>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label><br><br>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="pass" name="pass" required>
+                <label for="pass">Password</label><br><br>
+            </div>
+
+            <button onclick="addacc()">Sign Up!</button>
+
+            <br><br>
+            <p>Already have an account? Log in!</p><br><br>
+            <div class="input-group">
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-email">Email</label><br><br>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="login-pass" name="pass" required>
+                <label for="login-pass">Password</label>
+            </div>
+            <button onclick="existornot()">Log In</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="./code.js"></script>
+</body>
+</html>

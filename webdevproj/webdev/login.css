@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-image: url('marketbackground.png');
+    background-position: center bottom;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.lhead{
+    height: 145px;
+    background-color: #003521;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name p {
+    color: white;
+    font-size: 2em;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 145px);
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #003521;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d26;
+}

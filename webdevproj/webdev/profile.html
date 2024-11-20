@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profilepge.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header">
+               <div class="logo"><img src="images/usclogo.png"></div>
+               <div class="name"><p>USC NIGHT MARKET</p></div>
+                <div class="profile"><p>PROFILE</p></div>
+        </div><br>
+    </header>
+    <div class="sidebar">
+        <div class="back"><button onclick="back()"><img src="images/backarrow.png"></button></div>
+        <ul>
+            <li id="profilevande" >View and Edit Profile</li>
+            <li id="changepass" >Change Pass</li>
+            <li id="viewsell" >View Items you're selling</li>
+        </ul>
+    </div>
+
+    <div class="pcontainer" id="pcontainer">
+        
+
+
+        <div id="user-info">
+            <p id="name">Name: </p>
+            <p id="email">Email: </p>
+            <p id="year">Year: </p>
+            <p id="course">Course: </p> 
+            <button id="change-button" onclick="changeuserinfo()">Change your info</button>
+            <button id="log-out" onclick="logout()">Log Out</button>
+        </div>
+
+
+        <div id="edit-info" style="display:none">
+            <p>Name: <input type="text" id="new-name"></p>
+            <p>Email: <span id="email2"></span></p>
+            <p>Year: <input type="text" id="new-year"></p>
+            <p>Course: <input type="text" id="new-course"></p>
+            <button onclick="savenewinfo()">Save your changes</button>
+        </div>
+
+
+        <div id="changepassinfo" style="display:none">
+            <p>The website is currently on its expiremental phase, as such we won't be able to retrieve your password if you ever forget it.</p>
+            <p>Enter old password: <input type="text" id="oldpass"></p>
+            <p>Enter new password: <input type="text" id="newpass"></p>
+            <p id="status" style="display:none"></p>
+            <button onclick="changepassword()">Change</button>
+        
+        </div>
+    </div>
+    <div id="itemsell" style="display:none">
+        <p style="font-size: xx-large; font-family: cursive;">Items Being Ordered By Customers</p><hr style="height: 3px; background-color: black; border: none;">
+        <div class="orders">
+           <div id="items_sell" class="container">
+               
+           </div>
+        </div>
+
+        <hr style="height: 3px; background-color: black; border: none;">
+        <p style="font-size: xx-large; font-family: cursive;">Your Available Items for Sale</p><hr style="height: 3px; background-color: black; border: none;">
+        <section>
+            <div id="item_display" class="container">
+                    
+            </div>
+        </section>
+    </div>
+   
+    
+    <br><br>
+
+
+    <script type="text/javascript" src="./code.js"></script>
+    <script>
+        displayuser()
+        
+        function removeActiveClass() {
+        document.querySelectorAll('.sidebar ul li').forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+
+        document.getElementById('profilevande').addEventListener('click', () => {
+            removeActiveClass();
+            document.getElementById('profilevande').classList.add('active');
+            document.getElementById('pcontainer').style.display='block'  
+            document.getElementById('user-info').style.display='block'
+            document.getElementById('edit-info').style.display='none'
+            document.getElementById('itemsell').style.display='none'
+            document.getElementById('changepassinfo').style.display='none'
+        })
+
+        document.getElementById('changepass').addEventListener('click', () => {
+            removeActiveClass();
+            document.getElementById('changepass').classList.add('active');
+            document.getElementById('pcontainer').style.display='block'
+            document.getElementById('user-info').style.display='none'
+            document.getElementById('edit-info').style.display='none'
+            document.getElementById('itemsell').style.display='none'
+            document.getElementById('changepassinfo').style.display='block'
+        })
+
+        document.getElementById('viewsell').addEventListener('click', () => {
+            removeActiveClass();
+            
+            document.getElementById('viewsell').classList.add('active');
+            document.getElementById('user-info').style.display='none'
+            document.getElementById('edit-info').style.display='none'
+            document.getElementById('changepassinfo').style.display='none'
+            document.getElementById('itemsell').style.display='block'
+            document.getElementById('pcontainer').style.display='none'
+            viewitems()
+        })
+        
+    </script>
+</body>
+</html>

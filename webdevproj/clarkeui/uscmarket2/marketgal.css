@@ -1,0 +1,36 @@
+
+section{
+    font-family: cursive;
+}
+.sec {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1em; /* Space between items */
+}
+
+.container .outer {
+    background-color: beige;
+     padding-left: 0.5em; 
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1.5em; /* Increased font size */
+    height: 300px; /* Fixed height (adjust as needed) */
+    display: flex;
+    gap:1em;
+    /* flex-wrap: wrap; */
+    align-items:center;
+     justify-content:flex-start; 
+}
+.container  img{
+    height: 250px;
+    width: 250px;
+}
+/* .itm div {
+    
+} */
+
