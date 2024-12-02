@@ -1,123 +1,282 @@
-.clickable {
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-}
-
-.clickable img{
-    height: 200px;
-    width: 200px;
-    transition: 0.5s;
-}
-
- .clickable img:hover{
-    height: 250px;
-    width: 250px;
-    transition: 0.5s;
-}
-
-
-body {
+/* Global Reset */
+* {
     margin: 0;
-    background-image: url(images/marketbackground.png);
-    background-position: bottom center;
-    background-attachment: fixed;
-    position: static;
-    padding-top: 103px; 
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+/* Global Fonts and Colors */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #f4f4f4, #e9ecef);
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Account for fixed header */
+    overflow-x: hidden;
+}
+
+/* Utility Classes */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header */
 .header {
-    background-color: #003521;
+    background: linear-gradient(135deg, #0a6135, #006633);
+    color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
 }
 
-
-.logo{
-    margin-left: 30px;
+.header:hover {
+    background-color: #003921; /* Subtle darker green */
 }
 
-.name{
-    margin-top: 2px;
+.logo img {
+    height: 75px;
 }
 
-.name p{
-    color: white;
-    font-size: xx-large;
+.name {
+    text-align: center; /* Ensures the name text is centered */
 }
 
-.profile{
-    margin-right: 10px;
-    margin-top: 10px;
-    background-color: beige;
-    width: fit-content;
-    height:fit-content;
-    border-radius: 10px;
+.name p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFD700; /* USC Gold */
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: -150px; /* Adjust this value as needed */
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Profile Icon */
+.profile {
+    background: linear-gradient(135deg, #e6a600, #f4f4f4);
+    width: 60px; /* Slightly larger for better visibility */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}
-.profile:hover{
-    background-color: rgb(238, 238, 161);
-}
-
-.msg{
-    text-align: center; 
-    margin-top: 50px;
-    font-size: x-large;
-    font-family:cursive;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    position: relative;
 }
 
-.select{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  padding: 50px;
-  border-radius: 5px;
-  margin: auto;
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the aspect ratio of the image */
+    border-radius: 50%; /* Ensures the image is circular */
+    transition: transform 0.4s ease; /* Adds a smooth zoom effect */
+}
+
+.profile:hover {
+    transform: scale(1.2);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.profile:hover img {
+    transform: scale(1.1); /* Slight zoom effect on the image */
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 77, 38, 0.9), rgba(255, 215, 0, 0.8)), url('images/usc-campus.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 140px 20px;
+    color: white;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.hero button {
+    background: linear-gradient(135deg, #FFD700, #f39c12);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+.hero button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #f7e86d, #e6a31c);
+}
+
+/* Keyframes for Hero Section */
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive Selection Panel */
+.select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .select div {
-    border-radius: 10px;
-    font-family: cursive;
-}
-
- .Sell{
-   background-color: beige;
-   font-family:cursive;
-   font-size: x-large;
-   text-align: center;
-   height:fit-content;
-   width: fit-content;
-   padding: 5px;
-   border-radius: 10px;
-   margin: auto;
-   cursor: pointer;
-   position: static;
-   background-attachment:fixed;
-}
-.Sell:hover{
-   background-color: rgb(228, 228, 179);
-   transition: 0.3s;
- }
-
-.select div:hover {
-   background-color: aliceblue;
-   cursor: pointer;
-   transition:0.5s;
-} 
-
-.back button{
-    text-decoration: none;
-    background: none;
-    border: none;
+    background: linear-gradient(135deg, #006633, #004d26);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
-.back button img{
-   width: 50px;
-   height: 50px;
+
+.select div:hover {
+    background: linear-gradient(135deg, #FFD700, #ffab3d);
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #004d26, #006633);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffab3d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name p {
+        font-size: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .select div {
+        font-size: 1.2rem;
+    }
+}
+
+.Sell {
+    background: linear-gradient(135deg, #FFD700, #f39c12); /* Gold gradient */
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px auto;
+    display: block;
+    width: max-content;
+}
+
+.Sell::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(135deg, #f39c12, #FFD700);
+    z-index: -1;
+    transition: all 0.5s ease-out;
+    transform: skewX(-45deg);
+}
+
+.Sell:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Sell:hover::before {
+    left: 0;
+    transform: skewX(0deg);
 }
