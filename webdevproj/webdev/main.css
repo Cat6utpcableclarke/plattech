@@ -280,3 +280,15 @@ body {
     left: 0;
     transform: skewX(0deg);
 }
+
+.back button{
+    background-color:transparent;
+    border: none;
+}
+
+.back img{
+    background-color:transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
