@@ -1,13 +1,25 @@
-header .sheader{
-        background-color: #003521;
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;   
+/* Global styles for a consistent font across the page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container{
+
+/* Header styling */
+header .sheader {
+    background-color: #003521;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-weight: 600; /* Slightly bold for emphasis */
+}
+
+/* Container styling */
+.container {
     background-color: rgb(29, 185, 84);
     width: 50%;
     padding: 30px;
@@ -16,25 +28,29 @@ header .sheader{
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
+    font-size: 16px; /* Clean and readable */
 }
 
+/* Input fields */
 .container input[type="text"],
-.container input[type="file"]
-{
+.container input[type="file"] {
     width: 100%;
-    padding: 5px;
+    padding: 10px; /* Increased padding for better UX */
     border-radius: 5px;
     border: 1px solid #414141;
     background-color: #ffffff;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
-.container label{
+/* Labels */
+.container label {
     margin-bottom: 10px;
+    font-weight: 600; /* Emphasize form labels */
 }
 
-
-.radio{
+/* Radio buttons */
+.radio {
     display: flex;
     justify-content: space-between;
 }
@@ -46,12 +62,14 @@ header .sheader{
     padding: 10px;
     border-radius: 20px;
     margin-right: 50px;
-}
-.radio input {
-    margin:1px;
-    
+    font-size: 14px;
 }
 
+.radio input {
+    margin: 1px;
+}
+
+/* Submit button */
 .sell input[type="submit"] {
     width: 100px;
     align-self: center;
@@ -60,10 +78,12 @@ header .sheader{
     border: none;
     background-color: #e0e0e0;
     cursor: pointer;
+    font-weight: 600; /* Bolder text for buttons */
 }
 
-.upload p{
+/* Upload section */
+.upload p {
     text-align: center;
     background-color: beige;
- 
+    font-size: 14px;
 }
