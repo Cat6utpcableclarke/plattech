@@ -9,7 +9,7 @@
 /* Global Fonts and Colors */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #f4f4f4, #e9ecef);
+    background-image: url(sancharles.png);
     color: #333;
     line-height: 1.6;
     padding-top: 80px; /* Account for fixed header */
@@ -292,3 +292,5 @@ body {
     width: 50px;
     height: 50px;
 }
+
+   
